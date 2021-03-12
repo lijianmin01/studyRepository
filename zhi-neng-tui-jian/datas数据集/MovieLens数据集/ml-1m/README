@@ -1,0 +1,314 @@
+概括
+================================================== =============================
+
+这些文件包含约3,900部电影的1,000,209匿名分级
+由2000年加入MovieLens的6,040个MovieLens用户制作。
+
+使用许可
+================================================== =============================
+
+明尼苏达大学和任何研究人员都没有
+所涉及的可以保证数据的正确性，适用性
+出于任何特定目的，或基于
+使用数据集。该数据集可用于任何研究
+在以下条件下的目的：
+
+     *用户不得声明或暗示来自
+       明尼苏达大学或GroupLens研究小组。
+
+     *用户必须确认使用中的数据集
+       使用数据集产生的出版物
+       （有关引文，请参见下文）。
+
+     *用户不得单独分发数据
+       允许。
+
+     *用户不得将这些信息用于任何广告或
+       未经先征得许可的营利目的
+       来自GroupLens研究项目的教职员工，位于
+       明尼苏达大学。
+
+如果您还有其他问题或意见，请联系GroupLens
+<grouplens-info@cs.umn.edu>。
+
+引文
+================================================== =============================
+
+要确认出版物中使用了数据集，请引用以下内容
+纸：
+
+F. Maxwell Harper和Joseph A. Konstan。 2015. MovieLens数据集：历史
+和上下文。交互式智能系统（TiiS）5、4上的ACM事务
+第19条（2015年12月），共19页。 DOI = http：//dx.doi.org/10.1145/2827872
+
+
+致谢
+================================================== =============================
+
+感谢Shyong Lam和Jon Herlocker清理并生成数据
+放。
+
+有关GROUPLENS研究项目的更多信息
+================================================== =============================
+
+GroupLens研究项目是美国农业部的一个研究小组
+明尼苏达大学计算机科学与工程系。的成员
+GroupLens研究项目涉及许多与研究相关的项目
+信息过滤，协作过滤和
+推荐系统。该项目由约翰·里德尔（John Riedl）和约瑟夫（Joseph）教授领导
+康斯坦。该项目开始探索以下方面的自动化协作过滤
+1992年，但以其在全球范围内对自动化系统的试用而闻名
+自1996年起为Usenet新闻提供了协作式过滤系统。此后，该项目
+扩大了研究整体信息过滤解决方案的范围，
+整合基于内容的方法，并改善当前的协作
+过滤技术。
+
+有关GroupLens研究项目的更多信息，包括研究
+出版物，可以在以下网站上找到：
+        
+        http://www.grouplens.org/
+
+GroupLens Research目前根据以下内容经营电影推荐器
+协同过滤：
+
+        http://www.movi​​elens.org/
+
+评级文件说明
+================================================== =============================
+
+所有评分都包含在“ ratings.dat”文件中，并且位于
+格式如下：
+
+UserID :: MovieID :: Rating :: Timestamp
+
+-用户ID的范围是1到6040
+-MovieID的范围是1到3952
+-评分采用5星级标准（仅限全星级）
+-时间戳以自纪元以​​来的秒数表示（由time（2）返回）
+-每个用户至少有20个评分
+
+用户档案说明
+================================================== =============================
+
+用户信息位于文件“ users.dat”中，并且位于以下位置
+格式：
+
+用户ID ：：性别：：年龄：：职业：：邮政编码
+
+所有人口统计信息均由用户自愿提供，并且
+未检查准确性。仅提供了某些受众特征的用户
+信息包含在此数据集中。
+
+-性别用“ M”表示男性，用“ F”表示女性
+-从以下范围中选择年龄：
+
+* 1：“未满18岁”
+* 18：“ 18-24”
+* 25：“ 25-34”
+* 35：“ 35-44”
+* 45：“ 45-49”
+* 50：“ 50-55”
+* 56：“ 56+”
+
+-从以下选项中选择职业：
+
+* 0：“其他”或未指定
+* 1：“学术/教育者”
+* 2：“艺术家”
+* 3：“文书/管理员”
+* 4：“大专/研究生”
+* 5：“客户服务”
+* 6：“医生/医疗保健”
+* 7：“行政/管理人员”
+* 8：“农民”
+* 9：“家庭主妇”
+* 10：“ K-12学生”
+* 11：“律师”
+* 12：“程序员”
+* 13：“退休”
+* 14：“销售/营销”
+* 15：“科学家”
+* 16：“个体经营”
+* 17：“技术员/工程师”
+* 18：“商人/工匠”
+* 19：“待业”
+* 20：“作家”
+
+电影文件说明
+================================================== =============================
+
+电影信息位于文件“ movies.dat”中，并且位于 
+Gàikuò
+================================================== =============================
+
+
+SUMMARY
+================================================================================
+
+These files contain 1,000,209 anonymous ratings of approximately 3,900 movies 
+made by 6,040 MovieLens users who joined MovieLens in 2000.
+
+USAGE LICENSE
+================================================================================
+
+Neither the University of Minnesota nor any of the researchers
+involved can guarantee the correctness of the data, its suitability
+for any particular purpose, or the validity of results based on the
+use of the data set.  The data set may be used for any research
+purposes under the following conditions:
+
+     * The user may not state or imply any endorsement from the
+       University of Minnesota or the GroupLens Research Group.
+
+     * The user must acknowledge the use of the data set in
+       publications resulting from the use of the data set
+       (see below for citation information).
+
+     * The user may not redistribute the data without separate
+       permission.
+
+     * The user may not use this information for any commercial or
+       revenue-bearing purposes without first obtaining permission
+       from a faculty member of the GroupLens Research Project at the
+       University of Minnesota.
+
+If you have any further questions or comments, please contact GroupLens
+<grouplens-info@cs.umn.edu>. 
+
+CITATION
+================================================================================
+
+To acknowledge use of the dataset in publications, please cite the following
+paper:
+
+F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History
+and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4,
+Article 19 (December 2015), 19 pages. DOI=http://dx.doi.org/10.1145/2827872
+
+
+ACKNOWLEDGEMENTS
+================================================================================
+
+Thanks to Shyong Lam and Jon Herlocker for cleaning up and generating the data
+set.
+
+FURTHER INFORMATION ABOUT THE GROUPLENS RESEARCH PROJECT
+================================================================================
+
+The GroupLens Research Project is a research group in the Department of 
+Computer Science and Engineering at the University of Minnesota. Members of 
+the GroupLens Research Project are involved in many research projects related 
+to the fields of information filtering, collaborative filtering, and 
+recommender systems. The project is lead by professors John Riedl and Joseph 
+Konstan. The project began to explore automated collaborative filtering in 
+1992, but is most well known for its world wide trial of an automated 
+collaborative filtering system for Usenet news in 1996. Since then the project 
+has expanded its scope to research overall information filtering solutions, 
+integrating in content-based methods as well as improving current collaborative 
+filtering technology.
+
+Further information on the GroupLens Research project, including research 
+publications, can be found at the following web site:
+        
+        http://www.grouplens.org/
+
+GroupLens Research currently operates a movie recommender based on 
+collaborative filtering:
+
+        http://www.movielens.org/
+
+RATINGS FILE DESCRIPTION
+================================================================================
+
+All ratings are contained in the file "ratings.dat" and are in the
+following format:
+
+UserID::MovieID::Rating::Timestamp
+
+- UserIDs range between 1 and 6040 
+- MovieIDs range between 1 and 3952
+- Ratings are made on a 5-star scale (whole-star ratings only)
+- Timestamp is represented in seconds since the epoch as returned by time(2)
+- Each user has at least 20 ratings
+
+USERS FILE DESCRIPTION
+================================================================================
+
+User information is in the file "users.dat" and is in the following
+format:
+
+UserID::Gender::Age::Occupation::Zip-code
+
+All demographic information is provided voluntarily by the users and is
+not checked for accuracy.  Only users who have provided some demographic
+information are included in this data set.
+
+- Gender is denoted by a "M" for male and "F" for female
+- Age is chosen from the following ranges:
+
+	*  1:  "Under 18"
+	* 18:  "18-24"
+	* 25:  "25-34"
+	* 35:  "35-44"
+	* 45:  "45-49"
+	* 50:  "50-55"
+	* 56:  "56+"
+
+- Occupation is chosen from the following choices:
+
+	*  0:  "other" or not specified
+	*  1:  "academic/educator"
+	*  2:  "artist"
+	*  3:  "clerical/admin"
+	*  4:  "college/grad student"
+	*  5:  "customer service"
+	*  6:  "doctor/health care"
+	*  7:  "executive/managerial"
+	*  8:  "farmer"
+	*  9:  "homemaker"
+	* 10:  "K-12 student"
+	* 11:  "lawyer"
+	* 12:  "programmer"
+	* 13:  "retired"
+	* 14:  "sales/marketing"
+	* 15:  "scientist"
+	* 16:  "self-employed"
+	* 17:  "technician/engineer"
+	* 18:  "tradesman/craftsman"
+	* 19:  "unemployed"
+	* 20:  "writer"
+
+MOVIES FILE DESCRIPTION
+================================================================================
+
+Movie information is in the file "movies.dat" and is in the following
+format:
+
+MovieID::Title::Genres
+
+- Titles are identical to titles provided by the IMDB (including
+year of release)
+- Genres are pipe-separated and are selected from the following genres:
+
+	* Action
+	* Adventure
+	* Animation
+	* Children's
+	* Comedy
+	* Crime
+	* Documentary
+	* Drama
+	* Fantasy
+	* Film-Noir
+	* Horror
+	* Musical
+	* Mystery
+	* Romance
+	* Sci-Fi
+	* Thriller
+	* War
+	* Western
+
+- Some MovieIDs do not correspond to a movie due to accidental duplicate
+entries and/or test entries
+- Movies are mostly entered by hand, so errors and inconsistencies may exist
