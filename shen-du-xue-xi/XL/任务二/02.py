@@ -2,15 +2,18 @@ import sklearn
 import numpy as np
 
 def create_data():
+    """# 为了是数值取值为线性可分为 random_state 取值为 3  8 18  （后面的没有测试）  
+        18 最能体现划分过程
+    """
     from sklearn.datasets import make_classification
-    data, target = make_classification(n_samples=40,  # 样本个数
+    data, target = make_classification(n_samples=60,  # 样本个数
                                        n_features=2,  # 特征个数
                                        n_informative=2,  # 有效特征个数
                                        n_redundant=0,  # 冗余特征个数（有效特征的随机组合）
                                        n_repeated=0,  # 重复特征个数（有效特征和冗余特征的随机组合）
                                        n_classes=2,  # 样本类别
                                        n_clusters_per_class=2,  # 簇的个数
-                                       random_state=0)
+                                       random_state=18)
     return data, target
 
 
@@ -73,7 +76,7 @@ w = np.array((0.0, 0.0))
 b = 0.0
 
 # 所有数据训练10轮
-num_epochs = 10
+num_epochs = 1
 
 # 每10条数据为一个周期
 epoch = 20
@@ -81,7 +84,7 @@ epoch = 20
 # 学习率 0.01
 lr = 0.01
 
-while (num_epochs <= 30):
+while (num_epochs <= 10):
     # 随机打乱数据
     data, target = sklearn.utils.shuffle(data, target)
     # 记录已经训练过的数据的条数
@@ -94,6 +97,6 @@ while (num_epochs <= 30):
         if ((i + 1) % epoch == 0):
             print("第{}轮训练，after第{}条数据，分类效果如图,w:{},b:{},损失函数值为{}：".format(num_epochs, (i + 1), w, b,
                                                                          loss_fun(data, target, w, b)))
-            #show_data_line(data, target, w, b)
+            show_data_line(data, target, w, b)
 
     num_epochs += 1
