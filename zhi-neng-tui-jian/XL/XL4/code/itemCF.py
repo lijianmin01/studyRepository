@@ -65,9 +65,9 @@ class ItemCF:
     # 计算物品之间的相似度
     def ItemSimilarity(self):
         print("开始计算物品之间的相似度...")
-        if os.path.exists("../json/item_sim.json"):
+        if os.path.exists("../../../../../github_not_data/json/item_sim.json"):
             print("从文件中加载数据")
-            item_sim = json.load(open("../json/item_sim.json", "r"))
+            item_sim = json.load(open("../../../../../github_not_data/json/item_sim.json", "r"))
             return item_sim
         else:
             print("计算用户之间的相似度")
@@ -97,7 +97,7 @@ class ItemCF:
                     item_sim[i][j] = cuv / math.sqrt(N[i] * N[j])
 
             # 将计算出的结构，写入文件中
-            json.dump(item_sim, open("../json/item_sim.json", "w"))
+            json.dump(item_sim, open("../../../../../github_not_data/json/item_sim.json", "w"))
             print("物品之间的相似度已经写入文件")
 
             return item_sim
@@ -140,10 +140,10 @@ class ItemCF:
 
 
 if __name__ == '__main__':
-    file_path = "../ml-1m/ratings.dat"
+    file_path = "../../../../../github_not_data/ml-1m/ratings.dat"
     cf = ItemCF(file_path)
-    result = cf.recommend("1")
-    print("user '1' recommend result is {}".format(result))
+    result = cf.recommend("2")
+    print("user '2' recommend result is {}".format(result))
 
     pre = cf.precision()
     print("pre is {}".format(pre))

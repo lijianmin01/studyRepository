@@ -74,9 +74,9 @@ class UserCF:
         json.dumps()    将python对象编码成JSON字符串（可以这么理解，json.dumps()函数是将字典转化为字符串）
         json.loads()    将已编码的JSON字符串解码为python对象（可以这么理解，json.loads()函数是将字符串转化为字典）
         """
-        if os.path.exists("../json/user_sim.json"):
+        if os.path.exists("../../../../../github_not_data/json/user_sim.json"):
             print("从文件中加载用户之间的相似度")
-            user_sim = json.load(open("../json/user_sim.json"))
+            user_sim = json.load(open("../../../../../github_not_data/json/user_sim.json"))
             return user_sim
         else:
             print("计算用户之间的相似度")
@@ -120,7 +120,7 @@ class UserCF:
                     user_sim[u][v] = cuv/math.sqrt(N[u]*N[v])
 
             # 将计算出的结构，写入文件中
-            json.dump(user_sim, open("../json/user_sim.json", "w"))
+            json.dump(user_sim, open("../../../../../github_not_data/json/user_sim.json", "w"))
             print("用户之间的相似度已经写入文件")
             # 返回用户之间的相似度
             return user_sim
@@ -164,7 +164,8 @@ class UserCF:
         return hit / (precision_nums * 1.0)
 
 if __name__ == '__main__':
-    file_path = "../ml-1m/ratings.dat"
+    # file_path = "../ml-1m/ratings.dat"
+    file_path = "../../../../../github_not_data/ml-1m/ratings.dat"
     cf = UserCF(file_path)
     result = cf.recommend("1")
     print("user '1' recommend result is {}".format(result))

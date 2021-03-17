@@ -51,8 +51,9 @@ class RecBaseAdrHot:
 
 
 if __name__ == "__main__":
-    path = "../hotel-mess/hotel-mess.csv"
+    path = "../../../../../github_not_data/hotel-mess/hotel-mess.csv"
 
-    hotel_rec = RecBaseAdrHot(path, place="丰台区", type="combine", k=10, sort_flag=False)
+    hotel_rec = RecBaseAdrHot(path, place="西城区", type="combine", k=10, sort_flag=False)
     results = hotel_rec.reccomond()
-    print(results)
+    for i,score in results.items():
+        print(i,results)
