@@ -149,7 +149,7 @@ def train_model(model_type):
             if (i+1) % 100 == 0:
                 print("Epoch [{} / {}],Srep [{} / {}],loss:{:.4f}".format(epoch+1,num_epochs,i+1,total_step,loss.item()))
 
-            if (i+1) % 5 == 0:
+            if (i+1) % 200 == 0:
                 # 测试模型，不用计算梯度
                 with torch.no_grad():   
                     # 被预测争取的个数
@@ -193,7 +193,7 @@ def draw_acc(acc):
 
     # 图示：在左上角显示图示神经网络名字
     class_labels = ["net{}:{}".format(i,net_num_change[i]) for i in range(len(net_num_change))]
-    plt.legend(class_labels, loc=2)
+    plt.legend(class_labels)
     
     plt.show()
 
@@ -213,6 +213,7 @@ if __name__ == '__main__':
         cnt = train_model(net_i)
         acc_list.append(cnt)
 
+    print(acc_list)
     # 画图
     draw_acc(acc_list)
 
