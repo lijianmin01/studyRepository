@@ -4,6 +4,7 @@ import torchvision
 import torchvision.transforms as transforms
 
 import matplotlib.pyplot as plt
+import pickle
 
 # 获取手写数字的数据集
 def get_mnist_data():
@@ -171,7 +172,11 @@ def train_model(model_type):
                     acc = 1.0 * correct / total
                     accuracy_list.append(acc)
                     # print("正确率为：{}".format(acc))
-
+    # pickle.dump(acc_list, open('accuracy_list{}.pkl'.format(model_type), 'wb'))
+    import pickle
+    f = open('accuracy_list{}.pkl'.format(model_type), 'wb')
+    pickle.dump(accuracy_list, f)
+    f.close()
     return accuracy_list
 
 # 画图

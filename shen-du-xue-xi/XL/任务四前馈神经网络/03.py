@@ -197,7 +197,10 @@ def train_model(model_type):
                     acc = 1.0 * correct / total
                     accuracy_list.append(acc)
                     # print("正确率为：{}".format(acc))
-
+    import pickle
+    f = open('accuracy_list{}.pkl'.format(model_type), 'wb')
+    pickle.dump(accuracy_list, f)
+    f.close()
     return accuracy_list
 
 
@@ -225,9 +228,9 @@ def train_model(model_type):
 
 
 if __name__ == '__main__':
-
+    print("start~")
     # 如果可以调用gpu的话，使用gpu
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # 获取训练数据和测试数据
     train_loader, test_loader = get_mnist_data()
@@ -241,8 +244,13 @@ if __name__ == '__main__':
         acc_list.append(cnt)
 
     print(acc_list)
-    pickle.dump(acc_list, open('acc.pkl', 'wb'))
+    import pickle
+
+    f = open('acc.pkl', 'wb')
+    pickle.dump(acc_list, f)
+    f.close()
     # # 画图
     # draw_acc(acc_list)
+    print("end~")
 
 
