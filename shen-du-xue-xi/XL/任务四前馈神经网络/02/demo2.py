@@ -422,20 +422,20 @@ if __name__ == '__main__':
     # 获取训练数据和测试数据
     train_loader, test_loader = get_mnist_data()
 
-    # '''不同的学习率 0.001  0.01  0.1'''
-    # lr_acc_list = []
-    # time.sleep(10)
-    # for net_i in which_net:
-    #     cnt = lr_train_model(net_i)
-    #     lr_acc_list.append(cnt)
-    #     time.sleep(10)
-    #
-    # f = open('lr_acc.pkl', 'wb')
-    # pickle.dump(lr_acc_list, f)
-    # f.close()
-    # # # 画图
-    # # draw_acc(acc_list)
-    # print("end~")
+    '''不同的学习率 0.001  0.01  0.1'''
+    lr_acc_list = []
+    time.sleep(10)
+    for net_i in which_net:
+        cnt = lr_train_model(net_i)
+        lr_acc_list.append(cnt)
+        time.sleep(10)
+
+    f = open('lr_acc.pkl', 'wb')
+    pickle.dump(lr_acc_list, f)
+    f.close()
+    # # 画图
+    # draw_acc(acc_list)
+    print("end~")
 
     '''不同的激活函数'''
     which_net = [i for i in range(1, 5)]

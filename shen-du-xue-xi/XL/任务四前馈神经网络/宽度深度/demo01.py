@@ -38,7 +38,7 @@ def draw_acc(acc):
     plt.show()
 
 if __name__ == '__main__':
-    f = open('acc.pkl', 'rb')
+    f = open('../03/width_and_deep/acc.pkl', 'rb')
     a = pickle.load(f)
     f.close()
 

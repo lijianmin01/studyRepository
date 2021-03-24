@@ -204,27 +204,7 @@ def train_model(model_type):
     return accuracy_list
 
 
-# 画图
-# def draw_acc(acc):
-#     net_num_change = ['784->1024->10', '784->512->256->128->64->10', '487->32->32->32->32->10', '784->1024->128->10']
-#
-#     plt.figure()
-#
-#     x = [i for i in range(len(acc[0]))]
-#
-#     for net_type in range(len(acc)):
-#         y = acc[net_type]
-#         plt.plot(x, y)
-#         plt.scatter(x, y)
-#
-#     plt.xlabel('batch(500)')
-#     plt.ylabel('Accuracy')
-#
-#     # 图示：在左上角显示图示神经网络名字
-#     class_labels = ["net{}:{}".format(i, net_num_change[i]) for i in range(len(net_num_change))]
-#     plt.legend(class_labels)
-#
-#     plt.show()
+
 
 
 if __name__ == '__main__':
