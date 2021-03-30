@@ -16,7 +16,7 @@ class ItemCF:
     # 获取训练数据
     def get_train_data(self):
         # 读取数据
-        train = pd.read_csv("../dataSets/data2/user_artists_train.tsv", sep='\t', header=0).values
+        train = pd.read_csv("../../dataSets/data2/user_artists_train.tsv", sep='\t', header=0).values
 
         userIDs = list(set(train[:, 0]))
 
@@ -95,7 +95,7 @@ class ItemCF:
         return scorce
 
     def get_all_art(self):
-        artists = list(set(pd.read_csv("../dataSets/data2/user_artists_train.tsv", sep='\t', header=0).values[:, 1]))
+        artists = list(set(pd.read_csv("../../dataSets/data2/user_artists_train.tsv", sep='\t', header=0).values[:, 1]))
         return artists
 
     #为用户推荐art
@@ -116,7 +116,7 @@ def prv_run1(name="test"):
     ub = ItemCF()
 
     # 要预测的用户
-    prv_userIds = list(pd.read_csv("../dataSets/data2/user_artists_test.tsv", sep='\t', header=0).values[:, 0])
+    prv_userIds = list(pd.read_csv("../../dataSets/data2/user_artists_test.tsv", sep='\t', header=0).values[:, 0])
 
     for userid in prv_userIds:
         print(userid)
@@ -137,7 +137,7 @@ def zhuanhua(l):
 # 预测结果并生成数据
 def prv_run():
     # 要预测的用户
-    prv_userIds = list(pd.read_csv("../dataSets/data2/user_artists_test.tsv", sep='\t', header=0).values[:, 0])
+    prv_userIds = list(pd.read_csv("../../dataSets/data2/user_artists_test.tsv", sep='\t', header=0).values[:, 0])
 
     ub = ItemCF()
 
